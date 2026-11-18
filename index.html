@@ -20,12 +20,13 @@
     body {
       height: 100vh;
       height: 100dvh;
-      padding-top: env(safe-area-inset-top);
+      /* 状态栏安全区 + 额外留白，避开 iOS 顶部模糊渐变区域；觉得多/少可调整 14px */
+      padding-top: calc(env(safe-area-inset-top) + 14px);
     }
     iframe { width: 100%; height: 100%; border: none; display: block; }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbztRaGZnIlt8A99JE5-FKnm7rLW5ad8pPofhjEG1Uu9ztCNoGRHLwnhLKJn9ZUenBkF/exec" allow="autoplay"></iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbx0cuEygr6LtSxIZEKfRF5ahOAzjQiFMwzCRTMY9wsGWqXRWNC34nnfWqVayegxJDbk/exec" allow="autoplay"></iframe>
 </body>
 </html>
