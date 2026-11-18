@@ -13,20 +13,23 @@
   <title>背单词</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; overflow: hidden; background: #f4f5fb; }
+    html, body { position: fixed; inset: 0; width: 100%; overflow: hidden; background: #f4f5fb; }
     @media (prefers-color-scheme: dark) {
       html, body { background: #14162a; }
     }
-    body {
-      height: 100vh;
-      height: 100dvh;
-      /* 状态栏安全区 + 额外留白，避开 iOS 顶部模糊渐变区域；觉得多/少可调整 14px */
-      padding-top: calc(env(safe-area-inset-top) + 14px);
+    /* 顶部：状态栏安全区 + 额外留白（避开 iOS 模糊渐变区，可调整 14px）；底部：直接贴底 */
+    iframe {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      top: calc(env(safe-area-inset-top) + 14px);
+      width: 100%;
+      height: auto;
+      border: none;
+      display: block;
     }
-    iframe { width: 100%; height: 100%; border: none; display: block; }
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbx0cuEygr6LtSxIZEKfRF5ahOAzjQiFMwzCRTMY9wsGWqXRWNC34nnfWqVayegxJDbk/exec" allow="autoplay"></iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbwNe55okbXnuOfOvRZaOs_W4l6gFU2DYOOTecdA_wgICaLBoak4yrUvfmnHviNMpiOV/exec" allow="autoplay"></iframe>
 </body>
 </html>
